@@ -1860,3 +1860,56 @@ Connecting to database specified by database.yml
 Migrating to AddSessionsTable (20110823220412)
 Migrating to CreateKeywords (20150802014733)
   [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-03 02:50:50 +0800
+Processing by LoginController#prompt as HTML
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 1.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Processing by LoginController#prompt as HTML
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 47.3ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Served asset /get_keyword.css - 200 OK (4ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Served asset /global.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Served asset /get_keyword.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-03 02:50:51 +0800
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-03 02:50:54 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 0.4ms (ActiveRecord: 0.0ms)

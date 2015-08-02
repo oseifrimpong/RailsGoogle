@@ -11,5 +11,5 @@ AdwordsOnRails::Application.routes.draw do
  
 
   #root :to => "get_keyword#show"
-  root :to => "login#prompt"
+  root :to => "home#index"
 end
