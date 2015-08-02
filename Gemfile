@@ -13,3 +13,5 @@ gem 'google-adwords-api', '~> 0.14.0'
 
 # Gem for OAuth authorization.
 gem 'oauth2'
+
+gem 'uglifier'
