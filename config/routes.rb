@@ -10,5 +10,6 @@ AdwordsOnRails::Application.routes.draw do
 
  
 
-  root :to => "get_keyword#show"
+  #root :to => "get_keyword#show"
+  root :to => "login#prompt"
 end
