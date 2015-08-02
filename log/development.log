@@ -1,0 +1,1857 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddSessionsTable (20110823220412)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110823220412')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 01:25:41 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 01:25:42 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (1.9ms)
+Compiled campaign.css  (0ms)  (pid 73497)
+Compiled global.css  (0ms)  (pid 73497)
+Compiled report.css  (0ms)  (pid 73497)
+Compiled application.css  (19ms)  (pid 73497)
+Compiled jquery.js  (4ms)  (pid 73497)
+Compiled jquery_ujs.js  (0ms)  (pid 73497)
+Compiled campaign.js  (0ms)  (pid 73497)
+Compiled report.js  (0ms)  (pid 73497)
+Compiled application.js  (35ms)  (pid 73497)
+Completed 200 OK in 216.8ms (Views: 207.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /application.css - 200 OK (35ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /campaign.css - 200 OK (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /global.css - 200 OK (40ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /report.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /campaign.js - 200 OK (1ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /report.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 01:25:43 +0800
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8.8ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 01:26:54 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/callback?code=4/Sn0FuA3Z0py6pprALwNHyuQ12XoHVhrqJaGTk_N56iU" for 127.0.0.1 at 2015-08-02 01:27:13 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/Sn0FuA3Z0py6pprALwNHyuQ12XoHVhrqJaGTk_N56iU"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 4833.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12.7ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:18 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/account/input" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Processing by AccountController#input as HTML
+  Rendered account/input.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8.0ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 01:27:28 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-02 01:27:48 +0800
+Processing by AccountController#index as HTML
+Completed 500 Internal Server Error in 19867.0ms
+
+AdwordsApi::V201502::CustomerService::ApiException ([AuthenticationError.NOT_ADS_USER @ ; trigger:'<null>']):
+  app/controllers/account_controller.rb:22:in `get_accounts_graph'
+  app/controllers/account_controller.rb:5:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 03:37:28 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 70.5ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:37:29 +0800
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:37:29 +0800
+Served asset /campaign.css - 200 OK (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:37:29 +0800
+Served asset /global.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:37:29 +0800
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2015-08-02 03:37:30 +0800
+Served asset /report.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:37:30 +0800
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2015-08-02 03:37:30 +0800
+Served asset /report.js - 200 OK (3ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:37:30 +0800
+Served asset /campaign.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:37:30 +0800
+Served asset /application.js - 200 OK (13ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-02 03:37:38 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 1.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17.0ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:11 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/callback?code=4/IcLuRuk9CyrFbvtabQZq38LOA0sPb_KrZIzG96f2GeM" for 127.0.0.1 at 2015-08-02 03:38:20 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/IcLuRuk9CyrFbvtabQZq38LOA0sPb_KrZIzG96f2GeM"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 1781.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6.4ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2015-08-02 03:38:22 +0800
+Served asset /report.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (19.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20110823220412)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (16.7ms)[0m  [1mCREATE TABLE "sessions" ("id" serial primary key, "session_id" character varying(255) NOT NULL, "data" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.8ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110823220412')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 03:44:52 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (1.9ms)
+Compiled application.css  (1ms)  (pid 84500)
+Compiled application.js  (3ms)  (pid 84500)
+Completed 200 OK in 101.2ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Served asset /campaign.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Served asset /campaign.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:44:53 +0800
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/login/callback?error=access_denied" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"error"=>"access_denied"}
+Redirected to http://localhost:3000/login/prompt
+Completed 302 Found in 34.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7.1ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:45:20 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/callback?code=4/JVmEozXUaDf_BnPBZZ2baJ7102i1OORO6TWGYOAgpbw" for 127.0.0.1 at 2015-08-02 03:52:14 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/JVmEozXUaDf_BnPBZZ2baJ7102i1OORO6TWGYOAgpbw"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 1747.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6.2ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:16 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/report/index" for 127.0.0.1 at 2015-08-02 03:52:26 +0800
+
+ActionController::RoutingError (uninitialized constant ReportController):
+  activesupport (3.2.15) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.15) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.15) lib/active_support/inflector/methods.rb:229:in `constantize'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.7) lib/rack/etag.rb:23:in `call'
+  rack (1.4.7) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.15) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.15) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:405:in `_run__1757600266962258976__call__1382977588652808681__callbacks'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.15) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.15) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.15) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.15) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.15) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.15) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.15) lib/rails/engine.rb:484:in `call'
+  railties (3.2.15) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.15) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/campaign/index" for 127.0.0.1 at 2015-08-02 03:52:29 +0800
+Processing by CampaignController#index as HTML
+  Rendered campaign/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8.7ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:30 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:30 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:30 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:30 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:30 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:30 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 7.2ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:34 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/account/input" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Processing by AccountController#input as HTML
+  Rendered account/input.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 48.4ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:52:36 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8.1ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 03:54:12 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-02 03:54:15 +0800
+Processing by AccountController#index as HTML
+Completed 500 Internal Server Error in 2163.6ms
+
+AdwordsApi::V201502::CustomerService::ApiException ([AuthenticationError.NOT_ADS_USER @ ; trigger:'<null>']):
+  app/controllers/account_controller.rb:22:in `get_accounts_graph'
+  app/controllers/account_controller.rb:5:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 08:40:04 +0800
+
+ActionController::RoutingError (undefined local variable or method `session' for ApplicationController:Class):
+  app/controllers/application_controller.rb:17:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:3:in `<top (required)>'
+  app/controllers/home_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 08:40:05 +0800
+
+ActionController::RoutingError (undefined local variable or method `session' for ApplicationController:Class):
+  app/controllers/application_controller.rb:17:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:3:in `<top (required)>'
+  app/controllers/home_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 63.2ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Served asset /campaign.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Served asset /campaign.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 08:40:58 +0800
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-02 08:42:29 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23.7ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 08:42:38 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/callback?code=4/ZK_ChUoIw730J2j2yJoNJQZaawMqTos6JUSuNBY-R3k" for 127.0.0.1 at 2015-08-02 08:43:19 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/ZK_ChUoIw730J2j2yJoNJQZaawMqTos6JUSuNBY-R3k"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 1741.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 08:43:20 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8.1ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 08:43:21 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:21 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:21 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:21 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 08:43:21 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 08:43:21 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:21 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-02 08:43:35 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 0.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7.8ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 08:43:44 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:02:04 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 09:02:04 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (2.0ms)
+Compiled get_keyword.css  (0ms)  (pid 97396)
+Compiled application.css  (5ms)  (pid 97396)
+Compiled get_keyword.js  (0ms)  (pid 97396)
+Compiled application.js  (8ms)  (pid 97396)
+Completed 200 OK in 102.2ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /campaign.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /get_keyword.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /campaign.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /global.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /get_keyword.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:05 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/login/callback?code=4/NJ-xGNQD_RlHUwW4Yo0HTNLU5M7K9L6Ui18eByUiiXY" for 127.0.0.1 at 2015-08-02 09:02:28 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/NJ-xGNQD_RlHUwW4Yo0HTNLU5M7K9L6Ui18eByUiiXY"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 4612.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7.7ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:02:33 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:06:16 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Compiled application.css  (1ms)  (pid 97592)
+Compiled application.js  (4ms)  (pid 97592)
+Completed 200 OK in 90.3ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:17 +0800
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:17 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:17 +0800
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:17 +0800
+Served asset /get_keyword.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:17 +0800
+Served asset /get_keyword.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:17 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:17 +0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-02 09:06:20 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12.8ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:32 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/callback?code=4/LcE6J2hqPK5mTkGlBEwSeXE0kY7bVtLTYVpttYohm0Y" for 127.0.0.1 at 2015-08-02 09:06:48 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/LcE6J2hqPK5mTkGlBEwSeXE0kY7bVtLTYVpttYohm0Y"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 1803.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 09:06:49 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7.7ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:06:50 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:10:34 +0800
+
+AbstractController::ActionNotFound (The action 'get_keyword_idea' could not be found for GetKeywordController):
+  actionpack (3.2.15) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.15) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.15) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.15) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.15) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.15) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.7) lib/rack/etag.rb:23:in `call'
+  rack (1.4.7) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.15) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.15) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:405:in `_run__1040883909555973613__call__384421105708817585__callbacks'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.15) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.15) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.15) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.15) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.15) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.15) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.15) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.15) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.15) lib/rails/engine.rb:484:in `call'
+  railties (3.2.15) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.15) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:11:31 +0800
+Processing by GetKeywordController#get_keyword_ideas as HTML
+Completed 500 Internal Server Error in 0.4ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `get_keyword_ideas'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:22:19 +0800
+Processing by GetKeywordController#get_keyword_ideas as HTML
+Completed 500 Internal Server Error in 0.5ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `get_keyword_ideas'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:23:04 +0800
+Processing by GetKeywordController#get_keyword_ideas as HTML
+Completed 500 Internal Server Error in 0.5ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `get_keyword_ideas'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:43:38 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.6ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 73.6ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Served asset /global.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Served asset /get_keyword.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Served asset /get_keyword.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:29 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-02 09:44:34 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 0.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Processing by GetKeywordController#show as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19.4ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:44:53 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Processing by GetKeywordController#show as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7.4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 09:45:01 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:24:15 +0800
+Processing by GetKeywordController#show as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 13:24:16 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 72.0ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:24:16 +0800
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:24:16 +0800
+Served asset /get_keyword.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:24:16 +0800
+Served asset /global.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:16 +0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:17 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:17 +0800
+Served asset /get_keyword.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:17 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/login/callback?code=4/zE6FDbKHeWBp2Q60q3Rgdvc2ZJg4u-CfiKRRVIziDlo" for 127.0.0.1 at 2015-08-02 13:24:36 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/zE6FDbKHeWBp2Q60q3Rgdvc2ZJg4u-CfiKRRVIziDlo"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 4492.3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6.9ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:24:41 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:42:57 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.7ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:43:00 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.4ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:43:10 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.2ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:43:48 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.4ms
+
+Errno::ENOENT (No such file or directory - /Users/oseifrimpongobed/adwords_api.yml):
+  app/controllers/get_keyword_controller.rb:9:in `new'
+  app/controllers/get_keyword_controller.rb:9:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:47:20 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.5ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20110823220412)
+Migrating to CreateKeywords (20150802014733)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (50.2ms)[0m  [1mCREATE TABLE "keywords" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20150802014733')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20110823220412)
+Migrating to CreateKeywords (20150802014733)
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:53:33 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.5ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32.1ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Served asset /global.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Served asset /get_keyword.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Served asset /get_keyword.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:53:43 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-02 13:53:45 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Processing by GetKeywordController#show as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14.6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:32 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/callback?code=4/pkVQkgw4qgEwcoD7HM7Do9_kurJl4gkXG5m4uEAcuYQ" for 127.0.0.1 at 2015-08-02 13:54:49 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/pkVQkgw4qgEwcoD7HM7Do9_kurJl4gkXG5m4uEAcuYQ"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 3251.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4.6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:54:52 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 13:55:55 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6.5ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:55:56 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:55:56 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:55:56 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:55:56 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:55:56 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:55:56 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:55:56 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2015-08-02 13:56:03 +0800
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 0.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Processing by GetKeywordController#show as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6.9ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:56:31 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/login/callback?code=4/xO5oYU98DXCb7MCqvoDcQPI8sRxBBzLDFPyqx9FKAYA" for 127.0.0.1 at 2015-08-02 13:57:10 +0800
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/xO5oYU98DXCb7MCqvoDcQPI8sRxBBzLDFPyqx9FKAYA"}
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 1737.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4.0ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.css?body=1" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Served asset /get_keyword.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/get_keyword.js?body=1" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Served asset /get_keyword.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-02 13:57:12 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-02 14:31:20 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.4ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (36.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-03 01:06:37 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 0.4ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-03 02:02:36 +0800
+Processing by GetKeywordController#show as HTML
+Completed 500 Internal Server Error in 1.7ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/get_keyword_controller.rb:6:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
