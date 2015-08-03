@@ -1,7 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.15'
+gem 'rails'
 gem 'jquery-rails'
+
+gem 'ruby'
+
+gem 'rails_12factor'
 
 # Using sqlite by default.
 #gem 'sqlite3'
