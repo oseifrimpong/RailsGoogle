@@ -1,7 +1,7 @@
 require 'adwords_api'
 
 
-class GetKeywordController < ApplicationController
+class TargetingController < ApplicationController
 
 	def show(keyword_text)
   # AdwordsApi::Api will read a config file from ENV['HOME']/adwords_api.yml

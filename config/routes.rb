@@ -2,6 +2,15 @@ AdwordsOnRails::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  get 'login/prompt'
+
+  get 'login/callback'
+
+  get 'login/logout'
+
+  get 'get_keyword/show'
+
+   root :to => 'home#index'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -50,7 +59,6 @@ AdwordsOnRails::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
