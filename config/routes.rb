@@ -8,9 +8,19 @@ AdwordsOnRails::Application.routes.draw do
 
   get 'login/logout'
 
-  get 'get_keyword/show'
+  get 'targeting/show'
 
-   root :to => 'home#index'
+  #get 'targeting/:status' => 'targeting#show', foo: 'bar'
+
+match 'targeting' => 'targeting#show', via: :get
+
+  #get '/clients/:status' => 'clients#index', foo: 'bar'
+
+  get 'home/index'
+
+   #root :to => 'home#index'
+
+   root :to => 'targeting#show'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

@@ -3,15 +3,11 @@ require 'adwords_api'
 
 class TargetingController < ApplicationController
 
+  respond_to :json
+
 	def show(keyword_text)
-  # AdwordsApi::Api will read a config file from ENV['HOME']/adwords_api.yml
-  # when called without parameters.
+
   adwords = AdwordsApi::Api.new
-
-  # To enable logging of SOAP requests, set the log_level value to 'DEBUG' in
-  # the configuration file or provide your own logger:
-  # adwords.logger = Logger.new('adwords_xml.log')
-
   targeting_idea_srv = adwords.service(:TargetingIdeaService, API_VERSION)
 
   # Construct selector object.
@@ -22,17 +18,12 @@ class TargetingController < ApplicationController
         ['KEYWORD_TEXT', 'SEARCH_VOLUME', 'AVERAGE_CPC'],
     :search_parameters => [
       {
-        # The 'xsi_type' field allows you to specify the xsi:type of the object
-        # being created. It's only necessary when you must provide an explicit
-        # type that the client library can't infer.
+   
         :xsi_type => 'RelatedToQuerySearchParameter',
         :queries => [keyword_text]
       },
       {
-        # Language setting (optional).
-        # The ID can be found in the documentation:
-        #  https://developers.google.com/adwords/api/docs/appendix/languagecodes
-        # Only one LanguageSearchParameter is allowed per request.
+        
         :xsi_type => 'LanguageSearchParameter',
         :languages => [{:id => 1000}]
       }
@@ -60,7 +51,9 @@ class TargetingController < ApplicationController
   # Display results.
   results.each do |result|
     data = result[:data]
-    #data
+
+    render json: data
+    render xml: data
     keyword = data['KEYWORD_TEXT'][:value]
     #puts "Found keyword with text '%s'" % keyword
     average_cpc = data['AVERAGE_CPC'][:value]
@@ -73,7 +66,7 @@ class TargetingController < ApplicationController
       #puts "\tand average monthly search volume: %d" % average_monthly_searches
     end
   end
-  #puts "Total keywords related to '%s': %d." % [keyword_text, results.length]
+  puts "Total keywords related to '%s': %d." % [keyword_text, results.length]
 end
 
 if __FILE__ == $0
@@ -110,5 +103,4 @@ if __FILE__ == $0
     end
   end
 end
-
 end
