@@ -19,7 +19,7 @@
   #:oauth2_callback: INSERT_OAUTH2_CALLBACK_URL_HERE
 
   # Other parameters.
-  :developer_token: INSERT_YOUR_DEVELOPER_TOKEN_HERE
+  :developer_token: 28wGZqLLhvAvZYBqMqEJ9w
   # If you access only one account you can specify it here.
   # :client_customer_id: INSERT_YOUR_CLIENT_CUSTOMER_ID_HERE
   :user_agent: Rails-google

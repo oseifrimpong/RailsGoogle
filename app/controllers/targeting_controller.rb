@@ -5,10 +5,10 @@ class TargetingController < ApplicationController
 
   respond_to :json
 
-	def show(keyword_text)
+	def show
 
   adwords = AdwordsApi::Api.new
-  targeting_idea_srv = adwords.service(:TargetingIdeaService, API_VERSION)
+  targeting_idea_srv = adwords.service(:TargetingIdeaService)
 
   # Construct selector object.
   selector = {
@@ -20,7 +20,7 @@ class TargetingController < ApplicationController
       {
    
         :xsi_type => 'RelatedToQuerySearchParameter',
-        :queries => [keyword_text]
+        #:queries => [keyword_text]
       },
       {
         
@@ -30,7 +30,7 @@ class TargetingController < ApplicationController
     ],
     :paging => {
       :start_index => 0,
-      :number_results => PAGE_SIZE
+      #:number_results => PAGE_SIZE
     }
   }
 
@@ -54,6 +54,10 @@ class TargetingController < ApplicationController
 
     render json: data
     render xml: data
+  end
+end
+=begin
+
     keyword = data['KEYWORD_TEXT'][:value]
     #puts "Found keyword with text '%s'" % keyword
     average_cpc = data['AVERAGE_CPC'][:value]
@@ -68,6 +72,9 @@ class TargetingController < ApplicationController
   end
   puts "Total keywords related to '%s': %d." % [keyword_text, results.length]
 end
+=end
+
+
 
 if __FILE__ == $0
   API_VERSION = :v201506
@@ -76,8 +83,8 @@ if __FILE__ == $0
   begin
 
   	#@keyword = Keyword.new()
-    keyword_text = 'INSERT YOUR KEYWORD HERE'
-    show(keyword_text)
+    #keyword_text = 'INSERT YOUR KEYWORD HERE'
+    #show(keyword_text)
 
   # Authorization error.
   rescue AdsCommon::Errors::OAuth2VerificationRequired => e

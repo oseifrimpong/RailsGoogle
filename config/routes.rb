@@ -1,26 +1,36 @@
 AdwordsOnRails::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
+   # namespace :defaults => {:format => :json} do
+     
+      get '/login/prompt'
 
-  get 'login/prompt'
+      get '/login/callback'
 
-  get 'login/callback'
+      get '/login/logout'
 
-  get 'login/logout'
+      #get '/targeting/show', :defaults => {:format => :json}
 
-  get 'targeting/show'
+      #get '/targeting(/show(/keyword_text))', :defaults => {:format => :json}
 
-  #get 'targeting/:status' => 'targeting#show', foo: 'bar'
+      #get ':targeting/'
 
-match 'targeting' => 'targeting#show', via: :get
+      #get 'targeting/:status' => 'targeting#show', foo: 'bar'
 
-  #get '/clients/:status' => 'clients#index', foo: 'bar'
+    match 'targeting/show' => 'targeting#show', via: :get, :defaults => {:format => :json}
 
-  get 'home/index'
+      #get '/clients/:status' => 'clients#index', foo: 'bar'
 
-   #root :to => 'home#index'
+     # get 'targeting/show()', :defaults => {:format => :json}
 
-   root :to => 'targeting#show'
+      #get 'targeting/get_keyword_ideas(keyword_text)', to: 'targeting#show', defaults: { :format => :json }
+
+      get '/home/index'
+
+       #root :to => 'home#index'
+
+       root :to => 'targeting#show', :defaults => {:format => :json}
+    #end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
